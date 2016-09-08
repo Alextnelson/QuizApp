@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  QuizApp
+//  TrueFalseStarter
 //
-//  Created by Alexander Nelson on 9/8/16.
+//  Created by Alexander Nelson on 9/6/16.
 //  Copyright © 2016 Jetwolfe Labs. All rights reserved.
 //
 
