@@ -11,8 +11,14 @@ import GameKit
 import AudioToolbox
 
 class ViewController: UIViewController {
-    
-    let questionsPerRound = 4
+
+
+    override func viewDidLoad() {
+    }
+
+
+
+/*
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
@@ -32,13 +38,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadGameStartSound()
-        // Start game
-        playGameStartSound()
-        displayQuestion()
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -126,5 +126,9 @@ class ViewController: UIViewController {
     func playGameStartSound() {
         AudioServicesPlaySystemSound(gameSound)
     }
+}
+
+ */
+
 }
 

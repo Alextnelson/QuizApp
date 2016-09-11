@@ -6,88 +6,86 @@
 //  Copyright © 2016 Jetwolfe Labs. All rights reserved.
 //
 
-
 struct QuestionModel {
-    static var isCorrectChoice: Bool = true
-    let triviaQuestions: [[String : [[String : Bool]]]] =
+    let triviaQuestions: [[String : [[String : String]]]] =
         [
             ["This was the only US President to serve more than two consecutive terms." : [
-                    ["George Washington" : !isCorrectChoice],
-                    ["Franklin D. Roosevelt" : isCorrectChoice],
-                    ["Woodrow Wilson" : !isCorrectChoice],
-                    ["Andrew Jackson" : !isCorrectChoice]
+                    ["George Washington" : "Correct"],
+                    ["Franklin D. Roosevelt" : "Incorrect"],
+                    ["Woodrow Wilson" : "Incorrect"],
+                    ["Andrew Jackson" : "Incorrect"]
                 ]
             ],
             ["Which of the following countries has the most residents?" :
                 [
-                    ["Nigeria" : isCorrectChoice],
-                    ["Russia" : !isCorrectChoice],
-                    ["Iran" : !isCorrectChoice],
-                    ["Vietnam" : !isCorrectChoice]
+                    ["Nigeria" : "Correct"],
+                    ["Russia" : "Incorrect"],
+                    ["Iran" : "Incorrect"],
+                    ["Vietnam" : "Incorrect"]
                 ]
             ],
             ["In what year was the United Nations founded?" :
                 [
-                    ["1918" : !isCorrectChoice],
-                    ["1919" : !isCorrectChoice],
-                    ["1945" : isCorrectChoice],
-                    ["1954" : !isCorrectChoice]
+                    ["1918" : "Incorrect"],
+                    ["1919" : "Incorrect"],
+                    ["1945" : "Correct"],
+                    ["1954" : "Incorrect"]
                 ]
             ],
             ["The Titanic departed from the United Kingdom, where was it supposed to arrive?" :
                 [
-                    ["Paris" : !isCorrectChoice],
-                    ["Washington D.C." : !isCorrectChoice],
-                    ["New York City" : isCorrectChoice],
-                    ["Boston" : !isCorrectChoice]
+                    ["Paris" : "Incorrect"],
+                    ["Washington D.C." : "Incorrect"],
+                    ["New York City" : "Correct"],
+                    ["Boston" : "Incorrect"]
                 ]
             ],
             ["Which nation produces the most oil?" :
                 [
-                    ["Iran" : !isCorrectChoice],
-                    ["Iraq" : !isCorrectChoice],
-                    ["Brazil" : !isCorrectChoice],
-                    ["Canada" : isCorrectChoice]
+                    ["Iran" : "Incorrect"],
+                    ["Iraq" : "Incorrect"],
+                    ["Brazil" : "Incorrect"],
+                    ["Canada" : "Correct"]
                 ]
             ],
             ["Which country has most recently won consecutive World Cups in Soccer?" :
                 [
-                    ["Italy" : !isCorrectChoice],
-                    ["Brazil" : isCorrectChoice],
-                    ["Argentina" : !isCorrectChoice],
-                    ["Spain" : !isCorrectChoice]
+                    ["Italy" : "Incorrect"],
+                    ["Brazil" : "Correct"],
+                    ["Argentina" : "Incorrect"],
+                    ["Spain" : "Incorrect"]
                 ]
             ],
             ["Which of the following rivers is longest?" :
                 [
-                    ["Yangtze" : !isCorrectChoice],
-                    ["Mississippi" : isCorrectChoice],
-                    ["Congo" : !isCorrectChoice],
-                    ["Mekong" : !isCorrectChoice]
+                    ["Yangtze" : "Incorrect"],
+                    ["Mississippi" : "Correct"],
+                    ["Congo" : "Incorrect"],
+                    ["Mekong" : "Incorrect"]
                 ]
             ],
             ["Which city is the oldest?" :
                 [
-                    ["Mexico City" : isCorrectChoice],
-                    ["Cape Town" : !isCorrectChoice],
-                    ["San Juan" : !isCorrectChoice],
-                    ["Sydney" : !isCorrectChoice]
+                    ["Mexico City" : "Correct"],
+                    ["Cape Town" : "Incorrect"],
+                    ["San Juan" : "Incorrect"],
+                    ["Sydney" : "Incorrect"]
                 ]
             ],
             ["Which country was the first to allow women to vote in national elections?" :
                 [
-                    ["New Zealand" : isCorrectChoice],
-                    ["United States" : !isCorrectChoice],
-                    ["Sweden" : !isCorrectChoice],
-                    ["Senegal" : !isCorrectChoice]
+                    ["New Zealand" : "Correct"],
+                    ["United States" : "Incorrect"],
+                    ["Sweden" : "Incorrect"],
+                    ["Senegal" : "Incorrect"]
                 ]
             ],
             ["Which of these countries won the most medals in the 2012 Summer Games?" :
                 [
-                    ["France" : !isCorrectChoice],
-                    ["Germany" : !isCorrectChoice],
-                    ["Japan" : !isCorrectChoice],
-                    ["Great Britain" : isCorrectChoice]
+                    ["France" : "Incorrect"],
+                    ["Germany" : "Incorrect"],
+                    ["Japan" : "Incorrect"],
+                    ["Great Britain" : "Correct"]
                 ]
             ]
         ]
