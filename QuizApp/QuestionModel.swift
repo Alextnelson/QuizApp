@@ -6,211 +6,33 @@
 //  Copyright © 2016 Jetwolfe Labs. All rights reserved.
 //
 
-struct QuestionModel {
-    let triviaQuestions: [[String : [[String : String]]]] =
-        [
-            ["This was the only US President to serve more than two consecutive terms." : [
-                    ["George Washington" : "Correct"],
-                    ["Franklin D. Roosevelt" : "Incorrect"],
-                    ["Woodrow Wilson" : "Incorrect"],
-                    ["Andrew Jackson" : "Incorrect"]
-                ]
-            ],
-            ["Which of the following countries has the most residents?" :
-                [
-                    ["Nigeria" : "Correct"],
-                    ["Russia" : "Incorrect"],
-                    ["Iran" : "Incorrect"],
-                    ["Vietnam" : "Incorrect"]
-                ]
-            ],
-            ["In what year was the United Nations founded?" :
-                [
-                    ["1918" : "Incorrect"],
-                    ["1919" : "Incorrect"],
-                    ["1945" : "Correct"],
-                    ["1954" : "Incorrect"]
-                ]
-            ],
-            ["The Titanic departed from the United Kingdom, where was it supposed to arrive?" :
-                [
-                    ["Paris" : "Incorrect"],
-                    ["Washington D.C." : "Incorrect"],
-                    ["New York City" : "Correct"],
-                    ["Boston" : "Incorrect"]
-                ]
-            ],
-            ["Which nation produces the most oil?" :
-                [
-                    ["Iran" : "Incorrect"],
-                    ["Iraq" : "Incorrect"],
-                    ["Brazil" : "Incorrect"],
-                    ["Canada" : "Correct"]
-                ]
-            ],
-            ["Which country has most recently won consecutive World Cups in Soccer?" :
-                [
-                    ["Italy" : "Incorrect"],
-                    ["Brazil" : "Correct"],
-                    ["Argentina" : "Incorrect"],
-                    ["Spain" : "Incorrect"]
-                ]
-            ],
-            ["Which of the following rivers is longest?" :
-                [
-                    ["Yangtze" : "Incorrect"],
-                    ["Mississippi" : "Correct"],
-                    ["Congo" : "Incorrect"],
-                    ["Mekong" : "Incorrect"]
-                ]
-            ],
-            ["Which city is the oldest?" :
-                [
-                    ["Mexico City" : "Correct"],
-                    ["Cape Town" : "Incorrect"],
-                    ["San Juan" : "Incorrect"],
-                    ["Sydney" : "Incorrect"]
-                ]
-            ],
-            ["Which country was the first to allow women to vote in national elections?" :
-                [
-                    ["New Zealand" : "Correct"],
-                    ["United States" : "Incorrect"],
-                    ["Sweden" : "Incorrect"],
-                    ["Senegal" : "Incorrect"]
-                ]
-            ],
-            ["Which of these countries won the most medals in the 2012 Summer Games?" :
-                [
-                    ["France" : "Incorrect"],
-                    ["Germany" : "Incorrect"],
-                    ["Japan" : "Incorrect"],
-                    ["Great Britain" : "Correct"]
-                ]
-            ]
-        ]
 
+struct Question {
+    var question : String
+    var answers: [String]
+    var correctAnswer: String
 }
 
+let question1 = Question(question: "This was the only US President to serve more than two consecutive terms.", answers: ["George Washington", "Franklin D. Roosevelt", "Woodrow Wilson", "Andrew Jackson"], correctAnswer: "Franklin D. Roosevelt")
+let question2 = Question(question: "Which of the following countries has the most residents?", answers: ["Nigeria", "Russia", "Iran", "Vietnam"], correctAnswer: "Nigeria")
+let question3 = Question(question: "In what year was the United Nations founded?", answers: ["1918", "1919", "1945", "1954"], correctAnswer: "1945")
+let question4 = Question(question: "The Titanic departed from the United Kingdom, where was it supposed to arrive?", answers: ["Paris", "Washington, D.C.", "New York City", "Boston"], correctAnswer: "New York City")
+let question5 = Question(question: "Which nation produces the most oil?", answers: ["Iran", "Iraq", "Brazil", "Canada"], correctAnswer: "Canada")
+let question6 = Question(question: "Which country has most recently won consecutive World Cups in soccer?", answers: ["Italy", "Brazil", "Argentina", "Spain"], correctAnswer: "Brazil")
+let question7 = Question(question: "Which of the following rivers is longest?", answers: ["Yangtze", "Mississippi", "Congo", "Mekong"], correctAnswer: "Mississippi")
+let question8 = Question(question: "Which city is the oldest?", answers: ["Mexico City", "Cape Town", "San Juan", "Sydney"], correctAnswer: "Mexico City")
+let question9 = Question(question: "Which country was the first to allow women to vote in national elections?", answers: ["New Zealand", "United States", "Sweden", "Senegal"], correctAnswer: "New Zealand")
+let question10 = Question(question: "Which of these countries won the most medals in the 2012 Summer Games?", answers: ["France", "Germany", "Japan", "Great Britain"], correctAnswer: "Great Britain")
 
-
-
-
-
-//@IBAction func checkAnswer(sender: UIButton) {
-//    // Increment the questions asked counter
-//    questionsAsked += 1
-//
-//    let selectedQuestionDict = trivia[indexOfSelectedQuestion]
-//    let correctAnswer = selectedQuestionDict["Answer"]
-//
-//    if (sender === trueButton &&  correctAnswer == "True") || (sender === falseButton && correctAnswer == "False") {
-//        correctQuestions += 1
-//        questionField.text = "Correct!"
-//    } else {
-//        questionField.text = "Sorry, wrong answer!"
-//    }
-
-
-//import Foundation
-//
-//
-//let questionsPerRound = 4
-//var questionsAsked = 0
-//var correctQuestions = 0
-//var indexOfSelectedQuestion: Int = 0
-//
-//var gameSound: SystemSoundID = 0
-//
-//let trivia: [[String : String]] = [
-//    ["Question": "Only female koalas can whistle", "Answer": "False"],
-//    ["Question": "Blue whales are technically whales", "Answer": "True"],
-//    ["Question": "Camels are cannibalistic", "Answer": "False"],
-//    ["Question": "All ducks are birds", "Answer": "True"]
-//]
-//
-//
-//func displayQuestion() {
-//    indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextIntWithUpperBound(trivia.count)
-//    let questionDictionary = trivia[indexOfSelectedQuestion]
-//    questionField.text = questionDictionary["Question"]
-//    playAgainButton.hidden = true
-//}
-//
-//func displayScore() {
-//    // Hide the answer buttons
-//    trueButton.hidden = true
-//    falseButton.hidden = true
-//
-//    // Display play again button
-//    playAgainButton.hidden = false
-//
-//    questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
-//
-//}
-//
-//@IBAction func checkAnswer(sender: UIButton) {
-//    // Increment the questions asked counter
-//    questionsAsked += 1
-//
-//    let selectedQuestionDict = trivia[indexOfSelectedQuestion]
-//    let correctAnswer = selectedQuestionDict["Answer"]
-//
-//    if (sender === trueButton &&  correctAnswer == "True") || (sender === falseButton && correctAnswer == "False") {
-//        correctQuestions += 1
-//        questionField.text = "Correct!"
-//    } else {
-//        questionField.text = "Sorry, wrong answer!"
-//    }
-//
-//    loadNextRoundWithDelay(seconds: 2)
-//}
-//
-//func nextRound() {
-//    if questionsAsked == questionsPerRound {
-//        // Game is over
-//        displayScore()
-//    } else {
-//        // Continue game
-//        displayQuestion()
-//    }
-//}
-//
-//@IBAction func playAgain() {
-//    // Show the answer buttons
-//    trueButton.hidden = false
-//    falseButton.hidden = false
-//
-//    questionsAsked = 0
-//    correctQuestions = 0
-//    nextRound()
-//}
-//
-//
-//
-//// MARK: Helper Methods
-//
-//func loadNextRoundWithDelay(seconds seconds: Int) {
-//    // Converts a delay in seconds to nanoseconds as signed 64 bit integer
-//    let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
-//    // Calculates a time value to execute the method given current time and delay
-//    let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay)
-//
-//    // Executes the nextRound method at the dispatch time on the main queue
-//    dispatch_after(dispatchTime, dispatch_get_main_queue()) {
-//        self.nextRound()
-//    }
-//}
-//
-//func loadGameStartSound() {
-//    let pathToSoundFile = NSBundle.mainBundle().pathForResource("GameSound", ofType: "wav")
-//    let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
-//    AudioServicesCreateSystemSoundID(soundURL, &gameSound)
-//}
-//
-//func playGameStartSound() {
-//    AudioServicesPlaySystemSound(gameSound)
-//}
-//}
-//
-//
+let questions = [
+    question1,
+    question2,
+    question3,
+    question4,
+    question5,
+    question6,
+    question7,
+    question8,
+    question9,
+    question10
+]

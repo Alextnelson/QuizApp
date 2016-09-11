@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trivia Questions View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TriviaQuestionsViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -84,6 +84,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="nextQuestionButton" destination="K17-uy-MvB" id="nrm-ma-yai"/>
                         <outlet property="optionFourButton" destination="u0z-g6-mht" id="cWP-w2-ztS"/>
                         <outlet property="optionOneButton" destination="J1V-MS-ECi" id="uSL-pL-z4l"/>
                         <outlet property="optionThreeButton" destination="jyR-Ib-DB0" id="tXm-0z-bRF"/>
