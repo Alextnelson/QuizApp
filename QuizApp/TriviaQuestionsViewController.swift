@@ -8,7 +8,7 @@
 
 import UIKit
 import GameKit
-import AudioToolbox
+import AVFoundation
 
 class TriviaQuestionsViewController: UIViewController {
 
@@ -18,6 +18,7 @@ class TriviaQuestionsViewController: UIViewController {
     var indexOfSelectedQuestion: Int = 0
     var selectedQuestion: Question?
     var gameQuestions = [Question]()
+    var player: AVAudioPlayer?
     
 
     @IBOutlet weak var questionFieldLabel: UILabel!
@@ -38,6 +39,7 @@ class TriviaQuestionsViewController: UIViewController {
         playAgainButton.layer.cornerRadius = 5
         resetGame()
         displayQuestion()
+        playStartSound()
     }
     
     
@@ -115,10 +117,12 @@ class TriviaQuestionsViewController: UIViewController {
             questionFieldLabel.text = "Correct!"
             questionFieldLabel.textColor = UIColor.greenColor()
             makeOptionButtonsInactive()
+            playCorrectAnswerSound()
         } else {
             questionFieldLabel.text = "Sorry, wrong answer. The correct answer was \(selectedQuestion!.correctAnswer)."
             questionFieldLabel.textColor = UIColor.grayColor()
             makeOptionButtonsInactive()
+            playIncorrectAnswerSound()
         }
     }
     
@@ -160,6 +164,48 @@ class TriviaQuestionsViewController: UIViewController {
         optionTwoButton.enabled = true
         optionThreeButton.enabled = true
         optionFourButton.enabled = true
+    }
+    
+    func playStartSound() {
+        if let url = NSBundle.mainBundle().URLForResource("GameSound", withExtension: "wav") {
+            do {
+                player = try AVAudioPlayer(contentsOfURL: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
+    }
+    
+    func playCorrectAnswerSound() {
+        if let url = NSBundle.mainBundle().URLForResource("CorrectAnswer", withExtension: "wav") {
+            do {
+                player = try AVAudioPlayer(contentsOfURL: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
+    }
+    
+    func playIncorrectAnswerSound() {
+        if let url = NSBundle.mainBundle().URLForResource("WrongAnswer", withExtension: "wav") {
+            do {
+                player = try AVAudioPlayer(contentsOfURL: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
     }
 }
 

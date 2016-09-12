@@ -14,6 +14,8 @@
 		5B4907891D81BA9200A2FBA3 /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B4907881D81BA9200A2FBA3 /* GameSound.wav */; };
 		5B49078E1D81BAA800A2FBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49078C1D81BAA800A2FBA3 /* AppDelegate.swift */; };
 		5B49078F1D81BAA800A2FBA3 /* TriviaQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49078D1D81BAA800A2FBA3 /* TriviaQuestionsViewController.swift */; };
+		5B99DABA1D866AC000201D78 /* WrongAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B99DAB91D866AC000201D78 /* WrongAnswer.wav */; };
+		5B99DABC1D866AC700201D78 /* CorrectAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B99DABB1D866AC700201D78 /* CorrectAnswer.wav */; };
 		5BB7F3341D81BCF400EE44E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB7F3331D81BCF400EE44E9 /* Main.storyboard */; };
 		5BEEDB311D81C5B200ABB88B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEDB301D81C5B200ABB88B /* QuestionModel.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		5B4907881D81BA9200A2FBA3 /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
 		5B49078C1D81BAA800A2FBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B49078D1D81BAA800A2FBA3 /* TriviaQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaQuestionsViewController.swift; sourceTree = "<group>"; };
+		5B99DAB91D866AC000201D78 /* WrongAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WrongAnswer.wav; sourceTree = "<group>"; };
+		5B99DABB1D866AC700201D78 /* CorrectAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CorrectAnswer.wav; sourceTree = "<group>"; };
 		5BB7F3331D81BCF400EE44E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5BEEDB301D81C5B200ABB88B /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,11 +108,7 @@
 				5B49078C1D81BAA800A2FBA3 /* AppDelegate.swift */,
 				5B49078D1D81BAA800A2FBA3 /* TriviaQuestionsViewController.swift */,
 				5BEEDB301D81C5B200ABB88B /* QuestionModel.swift */,
-				5BB7F3331D81BCF400EE44E9 /* Main.storyboard */,
-				5B4907611D81BA5900A2FBA3 /* Assets.xcassets */,
-				5B4907631D81BA5900A2FBA3 /* LaunchScreen.storyboard */,
-				5B4907661D81BA5900A2FBA3 /* Info.plist */,
-				5B4907881D81BA9200A2FBA3 /* GameSound.wav */,
+				5B99DAB81D866AA000201D78 /* Supporting Files */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -129,6 +129,20 @@
 				5B49077C1D81BA5900A2FBA3 /* Info.plist */,
 			);
 			path = QuizAppUITests;
+			sourceTree = "<group>";
+		};
+		5B99DAB81D866AA000201D78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BB7F3331D81BCF400EE44E9 /* Main.storyboard */,
+				5B4907611D81BA5900A2FBA3 /* Assets.xcassets */,
+				5B99DABB1D866AC700201D78 /* CorrectAnswer.wav */,
+				5B4907631D81BA5900A2FBA3 /* LaunchScreen.storyboard */,
+				5B99DAB91D866AC000201D78 /* WrongAnswer.wav */,
+				5B4907661D81BA5900A2FBA3 /* Info.plist */,
+				5B4907881D81BA9200A2FBA3 /* GameSound.wav */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +252,8 @@
 				5B4907651D81BA5900A2FBA3 /* LaunchScreen.storyboard in Resources */,
 				5B4907891D81BA9200A2FBA3 /* GameSound.wav in Resources */,
 				5B4907621D81BA5900A2FBA3 /* Assets.xcassets in Resources */,
+				5B99DABC1D866AC700201D78 /* CorrectAnswer.wav in Resources */,
+				5B99DABA1D866AC000201D78 /* WrongAnswer.wav in Resources */,
 				5BB7F3341D81BCF400EE44E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
