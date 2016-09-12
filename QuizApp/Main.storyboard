@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eHR-Cl-a8w">
-                                <rect key="frame" x="40" y="215" width="520" height="267"/>
+                                <rect key="frame" x="40" y="165" width="520" height="267"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="32"/>
@@ -97,7 +97,7 @@
                             <constraint firstItem="eHR-Cl-a8w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NCd-Fi-xx0"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RLl-or-d4U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eHR-Cl-a8w" secondAttribute="trailing" constant="20" id="hBz-OR-aXa"/>
-                            <constraint firstItem="eHR-Cl-a8w" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="100" id="rUU-I7-mnA"/>
+                            <constraint firstItem="eHR-Cl-a8w" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="50" id="rUU-I7-mnA"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

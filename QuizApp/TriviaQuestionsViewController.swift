@@ -82,6 +82,8 @@ class TriviaQuestionsViewController: UIViewController {
     
     //MARK: Helper methods
     func displayQuestion() {
+        nextQuestionButton.hidden = true
+        
         if gameQuestions.count > 0 {
             indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextIntWithUpperBound(gameQuestions.count)
            self.selectedQuestion = gameQuestions.removeAtIndex(indexOfSelectedQuestion)
@@ -106,6 +108,8 @@ class TriviaQuestionsViewController: UIViewController {
     }
     
     func checkAnswer(button: UIButton) {
+        nextQuestionButton.hidden = false
+        
         if button.currentTitle == selectedQuestion!.correctAnswer {
             correctQuestions += 1
             questionFieldLabel.text = "Correct!"
